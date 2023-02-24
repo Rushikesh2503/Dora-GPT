@@ -89,7 +89,9 @@ const handleSubmit = async (e) => {
     const response = await fetch('https://dora-gpt.onrender.com/', {
         method: 'POST',
         headers: {
+            'Accept': 'application/json',
             'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*'
         },
         body: JSON.stringify({
             prompt: data.get('prompt')
